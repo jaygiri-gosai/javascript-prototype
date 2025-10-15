@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book - Example</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <main>
+      <div id="action-group">
+        <dialog>
+          <button autofocus>Close</button>
+          <form onsubmit="return submitForm(this);">
+            <div>
+              <label for="name">Name: </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                required
+                minlength="3"
+                maxlength="25"
+              />
+            </div>
+            <div>
+              <label for="author">Author: </label>
+              <input
+                type="text"
+                name="author"
+                id="author"
+                required
+                minlength="3"
+                maxlength="25"
+              />
+            </div>
+            <div>
+              <label for="pages">Total Pages: </label>
+              <input type="number" name="pages" id="pages" required />
+            </div>
+            <button type="submit" id="submit">Submit</button>
+          </form>
+        </dialog>
+        <button>New Book</button>
+      </div>
+      <div id="book-table"></div>
+    </main>
+  </body>
+</html>

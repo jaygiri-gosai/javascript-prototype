@@ -1,0 +1,21 @@
+#book-table {
+  width: 40%;
+}
+
+#action-group {
+  margin-bottom: 1rem;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+form {
+  margin-top: 1rem;
+}
+
+form > div {
+  margin-bottom: 1rem;
+}
