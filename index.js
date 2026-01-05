@@ -17,6 +17,7 @@ class Library {
   dialog = document.querySelector("dialog");
   showButton = document.querySelector("dialog + button");
   closeButton = document.querySelector("dialog button");
+  authorName = document.getElementById("author");
 
   constructor() {
     // "Show the dialog" button opens the dialog modally
@@ -27,6 +28,20 @@ class Library {
     // "Close" button closes the dialog
     this.closeButton.addEventListener("click", () => {
       this.dialog.close();
+    });
+
+    // Browser's default validation msg change using Constraint API
+    this.authorName.addEventListener("invalid", () => {
+      if (this.authorName.validity.valueMissing) {
+        this.authorName.setCustomValidity("The author name must be filled!");
+      } else {
+        this.authorName.setCustomValidity("");
+      }
+    });
+
+    // Browser's default validation msg change using Constraint API
+    this.authorName.addEventListener("input", () => {
+      this.authorName.setCustomValidity(""); // reset once user starts typing
     });
   }
 
